@@ -1,0 +1,117 @@
+/* Existing Styles */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* New Styles for Event Section */
+.App-events {
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+  text-align: left;
+}
+
+.App-events h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.events-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.event-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-card h2 {
+  font-size: 1.5rem;
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.event-card p {
+  font-size: 1rem;
+  margin: 0 0 15px;
+  color: #555;
+}
+
+.event-card small {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.event-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .App-events {
+    padding: 20px 10px;
+  }
+
+  .event-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .event-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
