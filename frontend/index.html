@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footprint of India</title>
     <link rel="stylesheet" href="styles.css">
-   
 </head>
 
 <body>
@@ -43,9 +42,11 @@
     <section id="artifacts">
         <h2>Artifacts Gallery</h2>
         <div class="artifacts">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Ashoka_pillar_La_Li.jpg" alt="Ashoka Pillar">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Seal_of_the_Indus_Valley_Civilization.jpg" alt="Indus Valley Seal">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Mughal_Miniature_Painting.jpg" alt="Mughal Painting">
+            <img src="/assets/Hawa mahal Jaipur.avif" alt="Hawa mahal">
+            <img src="/assets/Lal Quila agra.webp" alt="Lal Quila agra">
+            <img src="/assets/Lal Quila.jpg" alt="Lal Quila">
+            <img src="/assets/qutub minar.webp" alt="qutub minar">
+            <img src="/assets/Stone Chariot, Hampi.jpg" alt="Stone Chariot, Hampi">
         </div>
     </section>
 
@@ -60,6 +61,33 @@
     <footer>
         <p>&copy; 2024 Footprint of India. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Fetch events from the backend
+        fetch('/api/events')
+            .then(response => response.json())
+            .then(data => {
+                const eventsContainer = document.createElement('div');
+                eventsContainer.innerHTML = '<h2>Historical Events</h2>';
+                data.forEach(event => {
+                    const eventItem = document.createElement('p');
+                    eventItem.textContent = `${event.name}: ${event.description}`;
+                    eventsContainer.appendChild(eventItem);
+                });
+                document.body.appendChild(eventsContainer);
+            })
+            .catch(error => console.error('Error fetching events:', error));
+    </script>
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+    
 </body>
 
 </html>
