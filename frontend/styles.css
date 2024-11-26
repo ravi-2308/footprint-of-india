@@ -1,0 +1,56 @@
+ 
+ <style>
+ body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     line-height: 1.6;
+ }
+ header {
+     background: #333;
+     color: #fff;
+     padding: 1rem 0;
+     text-align: center;
+ }
+ header nav {
+     display: flex;
+     justify-content: center;
+     gap: 1.5rem;
+ }
+ header nav a {
+     color: #fff;
+     text-decoration: none;
+     font-size: 1.2rem;
+ }
+ .hero {
+     background: url('https://upload.wikimedia.org/wikipedia/commons/6/65/India_Gate_in_New_Delhi_03-2016_img3.jpg') no-repeat center center/cover;
+     color: #fff;
+     height: 50vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+ }
+ .hero h1 {
+     font-size: 2.5rem;
+     margin: 0;
+ }
+ section {
+     padding: 2rem;
+ }
+ .artifacts img {
+     width: 100%;
+     max-width: 300px;
+     margin: 0.5rem;
+ }
+ footer {
+     background: #333;
+     color: #fff;
+     text-align: center;
+     padding: 1rem 0;
+ }
+ footer a {
+     color: #fff;
+     text-decoration: none;
+ }
+</style>
